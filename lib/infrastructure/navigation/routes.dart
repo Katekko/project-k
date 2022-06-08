@@ -4,4 +4,5 @@ class Routes {
   }
 
   static const home = '/home';
+  static const chooseMode = '/choose-mode';
 }

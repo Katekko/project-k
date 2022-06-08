@@ -11,5 +11,10 @@ class Navigation {
       page: () => HomeScreen(),
       binding: HomeControllerBinding(),
     ),
+    GetPage(
+      name: Routes.chooseMode,
+      page: () => ChooseModeScreen(),
+      binding: ChooseModeControllerBinding(),
+    ),
   ];
 }

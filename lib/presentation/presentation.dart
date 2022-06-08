@@ -1,1 +1,2 @@
-export 'home/screens/home.screen.dart';
+export 'home/home.dart';
+export 'choose_mode/choose_mode.dart';

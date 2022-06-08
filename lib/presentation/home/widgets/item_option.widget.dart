@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:project_k/infrastructure/navigation/routes.dart';
+
+import '../../../domain/bet/models/bet_item.model.dart';
 
 class ItemOptionWidget extends StatelessWidget {
-  final String image;
-  final int headNumber;
-  final String name;
+  final BetItemModel betItem;
+  const ItemOptionWidget({required this.betItem});
 
-  const ItemOptionWidget({
-    required this.image,
-    required this.headNumber,
-    required this.name,
-  });
+  void navToChooseMode() {
+    Get.toNamed(Routes.chooseMode, arguments: {'betItem': betItem});
+  }
 
   List<Text> get buildNumbers {
     final textList = <Text>[];
 
-    for (int i = headNumber; i < (headNumber + 4); i++) {
+    for (int i = betItem.headNumber; i < (betItem.headNumber + 4); i++) {
       final isTwoNumber = i > 9;
 
       textList.add(
@@ -34,7 +35,7 @@ class ItemOptionWidget extends StatelessWidget {
       width: 155,
       child: Card(
         child: InkWell(
-          onTap: () {},
+          onTap: navToChooseMode,
           borderRadius: BorderRadius.circular(3),
           child: Column(
             children: [
@@ -42,13 +43,13 @@ class ItemOptionWidget extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset(image, width: 100),
+                  Image.asset(betItem.image, width: 100),
                   const SizedBox(width: 8),
                   Column(children: buildNumbers)
                 ],
               ),
               const SizedBox(height: 5),
-              Text(name, style: const TextStyle(fontSize: 22)),
+              Text(betItem.name, style: const TextStyle(fontSize: 22)),
               const SizedBox(height: 10),
             ],
           ),
