@@ -33,21 +33,25 @@ class ItemOptionWidget extends StatelessWidget {
     return SizedBox(
       width: 155,
       child: Card(
-        child: Column(
-          children: [
-            const SizedBox(height: 10),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset(image, width: 100),
-                const SizedBox(width: 8),
-                Column(children: buildNumbers)
-              ],
-            ),
-            const SizedBox(height: 5),
-            Text(name, style: const TextStyle(fontSize: 22)),
-            const SizedBox(height: 10),
-          ],
+        child: InkWell(
+          onTap: () {},
+          borderRadius: BorderRadius.circular(3),
+          child: Column(
+            children: [
+              const SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(image, width: 100),
+                  const SizedBox(width: 8),
+                  Column(children: buildNumbers)
+                ],
+              ),
+              const SizedBox(height: 5),
+              Text(name, style: const TextStyle(fontSize: 22)),
+              const SizedBox(height: 10),
+            ],
+          ),
         ),
       ),
     );
