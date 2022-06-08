@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/item_option.widget.dart';
+import '../widgets/item_option.widget.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
