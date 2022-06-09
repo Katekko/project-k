@@ -14,18 +14,16 @@ class ItemOptionWidget extends StatelessWidget {
 
   List<Text> get buildNumbers {
     final textList = <Text>[];
-
-    for (int i = betItem.headNumber; i < (betItem.headNumber + 4); i++) {
-      final isTwoNumber = i > 9;
+    for (var number in betItem.allNumbers) {
+      final isTwoNumber = number > 9;
 
       textList.add(
         Text(
-          '${!isTwoNumber ? '0' : ''}$i',
+          '${!isTwoNumber ? '0' : ''}$number',
           style: const TextStyle(fontSize: 18),
         ),
       );
     }
-
     return textList;
   }
 
