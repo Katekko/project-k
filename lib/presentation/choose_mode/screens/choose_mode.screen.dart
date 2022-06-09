@@ -23,7 +23,8 @@ class ChooseModeScreen extends GetView<ChooseModeController> {
               HeadOrFiveWidget(),
               const SizedBox(height: 10),
               ElevatedButton(
-                onPressed: controller.enableButton ? () {} : null,
+                onPressed:
+                    controller.enableButton ? controller.navToConfirmBet : null,
                 child: const Text('CONTINUAR'),
               )
             ],
