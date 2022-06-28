@@ -6,9 +6,9 @@ import '../../../../presentation/home/controllers/home.controller.dart';
 class HomeControllerBinding extends Bindings {
   @override
   void dependencies() {
-    final betRepository = BetRepositoryBinding();
+    final betBinding = BetRepositoryBinding();
     Get.lazyPut<HomeController>(
-      () => HomeController(betRepository: betRepository.repository),
+      () => HomeController(betRepository: betBinding.repository),
     );
   }
 }
