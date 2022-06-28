@@ -6,4 +6,5 @@ class Routes {
   static const home = '/home';
   static const chooseMode = '/choose-mode';
   static const confirmBet = '/confirm-bet';
+  static const payment = '/payment';
 }

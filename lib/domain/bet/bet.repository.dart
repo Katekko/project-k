@@ -28,12 +28,4 @@ class BetRepository {
       rethrow;
     }
   }
-
-  Future<void> confirmBet(BetItemModel bet) async {
-    try {
-      // salvar bet
-    } catch (err) {
-      rethrow;
-    }
-  }
 }
