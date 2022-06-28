@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
         title: 'Escolha algum personagem para apostar:',
         children: [
           Wrap(
-            children: const [
+            children: [
               ItemOptionWidget(
                 betItem: BetItemModel(
                   id: 1,

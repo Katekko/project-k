@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 import 'package:project_k/domain/bet/models/bet_item.model.dart';
+import 'package:project_k/domain/bet/models/bet_type.model.dart';
+import 'package:project_k/infrastructure/navigation/routes.dart';
 
 class ChooseModeController extends GetxController {
   late final BetItemModel betItem;
@@ -70,7 +72,17 @@ class ChooseModeController extends GetxController {
     }
   }
 
-  void navToConfirmBet() {}
+  void navToConfirmBet() {
+    final betType = BetTypeModel(
+      id: this.betType.value,
+      isHead: headOrFive.value == 0,
+      number: number.value,
+    );
+
+    betItem.betType = betType;
+
+    Get.toNamed(Routes.confirmBet, arguments: {'betItem': betItem});
+  }
 
   bool get enableButton => true.obs.value;
 }

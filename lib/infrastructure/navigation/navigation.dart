@@ -16,5 +16,10 @@ class Navigation {
       page: () => ChooseModeScreen(),
       binding: ChooseModeControllerBinding(),
     ),
+    GetPage(
+      name: Routes.confirmBet,
+      page: () => ConfirmBetScreen(),
+      binding: ConfirmBetControllerBinding(),
+    ),
   ];
 }
